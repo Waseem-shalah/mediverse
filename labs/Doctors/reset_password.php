@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $update = $conn->prepare("
                     UPDATE users
-                    SET password = ?, reset_token = NULL, reset_token_expires = NULL
+                    SET password = ?, reset_token = NULL, token_expiry = NULL
                     WHERE id = ?
                 ");
                 $uid = (int)$user['id'];
